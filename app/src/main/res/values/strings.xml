@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InvestmentTracker</string>
+    <string name="overview_investments">Overview investments</string>
+    <string name="happy_people">Happy people investing</string>
+    <string name="create_title">Create investment</string>
+    <string name="delete_title">Delete investment</string>
+    <string name="welcome_text">Welcome to Your Investment Portfolio</string>
+    <string name="create_btn">Create</string>
+    <string name="delete_btn">Delete</string>
+    <string name="invest_name">Name</string>
+    <string name="invest_amount">Amount</string>
+    <string name="invest_type">Type</string>
+    <string name="invest_buy_price">Buy price</string>
+    <string name="create_secondary_btn">Create investment</string>
+    <string name="delete_secondary_btn">Delete investment</string>
+    <string name="invest_name_del">Name: %1$s</string>
+    <string name="invest_amount_del">Amount: %1$s</string>
+    <string name="invest_type_del">Type: %1$s</string>
+    <string name="invest_buy_price_del">Buy price: %1$s</string>
+    <string name="invest_value_del">Value: %1$s</string>
+    <string name="invest_date_del">Buy Date: %1$s</string>
+    <string name="res_btn">Research</string>
+    <string name="search_btn">Search</string>
+    <string name="search_hint">Search...</string>
+    <string name="crypto_title">Find coin</string>
+    <string name="vives_title">My Vives-Information</string>
+    <string name="email_address">Email</string>
+    <string name="vives_id">Vives Id</string>
+    <string name="info_title">User</string>
+</resources>

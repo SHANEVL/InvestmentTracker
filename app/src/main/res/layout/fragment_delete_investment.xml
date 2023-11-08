@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="investment"
+            type="com.example.investmenttracker.models.Investment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_grey"
+        android:padding="16dp"
+        tools:context=".screens.investment.DeleteInvestmentFragment">
+
+    <!-- Title Area -->
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Investment Name -->
+    <TextView
+        android:id="@+id/textView_investmentName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@{@string/invest_name_del(investment.investmentName)}"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Investment Amount -->
+    <TextView
+        android:id="@+id/textView_investmentAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@{@string/invest_amount_del(investment.investmentAmount)}"
+        app:layout_constraintTop_toBottomOf="@+id/textView_investmentName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Investment Type -->
+    <TextView
+        android:id="@+id/textView_investmentType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@{@string/invest_type_del(investment.investmentType)}"
+        app:layout_constraintTop_toBottomOf="@+id/textView_investmentAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Investment Date -->
+    <TextView
+        android:id="@+id/textView_investmentDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@{@string/invest_buy_price_del(investment.buyPrice)}"
+        app:layout_constraintTop_toBottomOf="@+id/textView_investmentType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Investment Buy Price -->
+    <TextView
+        android:id="@+id/textView_investmentBuyPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@{@string/invest_value_del(investment.investmentValue)}"
+        app:layout_constraintTop_toBottomOf="@+id/textView_investmentDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Investment Value -->
+    <TextView
+        android:id="@+id/textView_investmentValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@{@string/invest_date_del(investment.investmentDate)}"
+        app:layout_constraintTop_toBottomOf="@+id/textView_investmentBuyPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Delete Button -->
+    <Button
+        android:id="@+id/button_deleteInvestment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_secondary_btn"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView_investmentValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Profit Image -->
+    <ImageView
+        android:id="@+id/image_profit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/profit"
+        app:layout_constraintTop_toBottomOf="@+id/button_deleteInvestment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

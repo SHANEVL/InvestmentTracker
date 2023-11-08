@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_investment"
+    app:startDestination="@id/ViewInvestmentsFragment">
+
+    <fragment
+        android:id="@+id/ViewInvestmentsFragment"
+        android:name="com.example.investmenttracker.screens.investment.ViewInvestmentsFragment"
+        android:label="fragment_view_investments"
+        tools:layout="@layout/fragment_view_investments">
+        <action
+            android:id="@+id/action_viewInvestmentsFragment_to_createInvestmentFragment"
+            app:destination="@id/createInvestmentFragment" />
+        <action
+            android:id="@+id/action_viewInvestmentsFragment_to_deleteInvestmentFragment"
+            app:destination="@id/deleteInvestmentFragment" />
+        <action
+            android:id="@+id/action_viewInvestmentsFragment_to_cryptoFragment"
+            app:destination="@id/cryptoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createInvestmentFragment"
+        android:name="com.example.investmenttracker.screens.investment.CreateInvestmentFragment"
+        tools:layout="@layout/fragment_create_investment" />
+
+    <fragment
+        android:id="@+id/deleteInvestmentFragment"
+        android:name="com.example.investmenttracker.screens.investment.DeleteInvestmentFragment"
+        tools:layout="@layout/fragment_delete_investment">
+        <argument
+            android:name="investment"
+            app:argType="com.example.investmenttracker.models.Investment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cryptoFragment"
+        android:name="com.example.investmenttracker.screens.api.CryptoFragment"
+        android:label="fragment_crypto"
+        tools:layout="@layout/fragment_crypto" />
+</navigation>

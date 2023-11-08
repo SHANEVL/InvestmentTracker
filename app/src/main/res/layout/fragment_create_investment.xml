@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.investmenttracker.screens.investment.InvestmentViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_grey"
+        android:padding="16dp"
+        tools:context=".screens.investment.CreateInvestmentFragment">
+
+    <!-- Title Area -->
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/create_title"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Investment Name Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_investmentName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_investmentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/invest_name"
+            android:text="@={viewModel.newInvestmentName}"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Investment Amount Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_investmentAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/layout_investmentName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_investmentAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="@string/invest_amount"
+            android:text="@={viewModel.newInvestmentAmount}"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Investment Type Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_investmentType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/layout_investmentAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_investmentType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/invest_type"
+            android:text="@={viewModel.newInvestmentType}"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Investment Buy Price Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_buyPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_investmentType">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_buyPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/invest_buy_price"
+                android:inputType="numberDecimal"
+                android:text="@={viewModel.newInvestmentBuyPrice}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Create Button -->
+        <Button
+            android:id="@+id/button_create_investment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/create_secondary_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_buyPrice" />
+
+        <ImageView
+            android:id="@+id/image_happy_people"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/happy_people"
+            android:scaleType="centerInside"
+            android:src="@drawable/happy_people"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_create_investment"
+            app:layout_constraintVertical_bias="0.145" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

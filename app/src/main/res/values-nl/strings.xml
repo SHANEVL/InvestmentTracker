@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InvesteerTracker</string>
+    <string name="overview_investments">Overzicht Investeringen</string>
+    <string name="happy_people">Blije investeerders</string>
+    <string name="create_title">Vul het formulier in</string>
+    <string name="delete_title">Overzicht investering</string>
+    <string name="welcome_text">Welkom bij uw Portfolio!</string>
+    <string name="create_btn">Voeg toe</string>
+    <string name="delete_btn">Verwijder</string>
+    <string name="invest_name">Naam</string>
+    <string name="invest_amount">Hoeveelheid</string>
+    <string name="invest_type">Type</string>
+    <string name="invest_buy_price">Aankoopprijs</string>
+    <string name="create_secondary_btn">Voeg investering toe</string>
+    <string name="delete_secondary_btn">Verwijder investering</string>
+    <string name="invest_name_del">Naam: %1$s</string>
+    <string name="invest_amount_del">Hoeveelheid: %1$s</string>
+    <string name="invest_type_del">Type: %1$s</string>
+    <string name="invest_buy_price_del">Aankoopprijs: %1$s</string>
+    <string name="invest_value_del">Waarde: %1$s</string>
+    <string name="invest_date_del">Aankoop datum: %1$s</string>
+    <string name="res_btn">Onderzoek</string>
+    <string name="search_btn">Zoeken</string>
+    <string name="search_hint">Zoeken...</string>
+    <string name="crypto_title">Zoek token</string>
+    <string name="vives_title">mijn Vives-gegevens</string>
+    <string name="email_address">Email</string>
+    <string name="vives_id">Vives Id</string>
+    <string name="info_title">Gebruiker</string>
+</resources>

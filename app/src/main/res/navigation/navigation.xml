@@ -1,0 +1,37 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.investmenttracker.screens.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_investmentActivity"
+            app:destination="@id/investmentActivity" />
+        <action
+            android:id="@+id/action_mainFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
+
+    <activity
+        android:id="@+id/investmentActivity"
+        android:name="com.example.investmenttracker.InvestmentActivity"
+        android:label="activity_investment"
+        tools:layout="@layout/activity_investment">
+        <fragment
+            android:id="@+id/viewInvestmentsFragment"
+            android:name="com.example.investmenttracker.screens.investment.ViewInvestmentsFragment"
+            android:label="fragment_view_investments"
+            tools:layout="@layout/fragment_view_investments" />
+    </activity>
+
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.investmenttracker.screens.info.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
+
+</navigation>
